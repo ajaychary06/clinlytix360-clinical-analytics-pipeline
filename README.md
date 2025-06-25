@@ -82,6 +82,31 @@ clinlytix360_airflow/
 ├── requirements.txt
 
 ├── LICENSE
+
 ├── .gitignore
 
 └── README.md
+
+
+
+---
+
+## 🔧 How to Run
+
+### Prerequisites
+- Docker Desktop (with WSL2 backend)
+- Python 3.10+ for local testing (optional)
+
+### Step 1: Start Airflow & DAG
+```bash
+cd clinlytix360_airflow
+docker compose up --build
+```
+
+Then go to: http://localhost:8080 and log in with:
+
+Username: airflow
+
+Password: airflow
+
+
