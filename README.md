@@ -109,4 +109,7 @@ Username: airflow
 
 Password: airflow
 
+Trigger the DAG named ```clinlytix360_pipeline```
+
+
 
