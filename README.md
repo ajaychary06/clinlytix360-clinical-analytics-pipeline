@@ -149,7 +149,7 @@ Automated clinical data pipelines (Airflow)
 This project is licensed under the MIT License — see the ```LICENSE``` file for details.
 
 
-Built by Ajay Chary as a showcase of healthcare analytics, MLOps, and end-to-end data pipeline orchestration.
+Built by Ajaychary as a showcase of healthcare analytics, MLOps, and end-to-end data pipeline orchestration.
 
 
 
