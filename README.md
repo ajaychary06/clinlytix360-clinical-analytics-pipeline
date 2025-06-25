@@ -104,10 +104,11 @@ docker compose up --build
 ```
 
 Then go to: http://localhost:8080 and log in with:
-
+```
 Username: airflow
 
 Password: airflow
+```
 
 Trigger the DAG named ```clinlytix360_pipeline```
 
