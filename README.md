@@ -133,15 +133,15 @@ Then go to: http://localhost:8501
 
 ## 🧪 Use Cases Simulated
 
-Real-world evidence (RWE) modeling
+- Real-world evidence (RWE) modeling
 
-Clinical trial feasibility planning
+- Clinical trial feasibility planning
 
-PRO/COA psychometric data capture
+- PRO/COA psychometric data capture
 
-Risk factor identification with Cox regression
+- Risk factor identification with Cox regression
 
-Automated clinical data pipelines (Airflow)
+- Automated clinical data pipelines (Airflow)
 
 
 ## 📜 License
