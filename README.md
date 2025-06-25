@@ -112,5 +112,57 @@ Password: airflow
 
 Trigger the DAG named ```clinlytix360_pipeline```
 
+## Step 2: Launch Streamlit Dashboard
+``` bash
+cd clinlytix360_airflow/scripts/dashboards
+streamlit run app.py
+```
+
+Then go to: http://localhost:8501
+
+
+## 📊 Key Visual Outputs
+
+| Visualization                 | Description                                             |
+| ----------------------------- | ------------------------------------------------------- |
+| `km_plot.png`                 | Kaplan-Meier survival curves by cancer stage            |
+| `cox_summary.txt`             | Text summary of Cox regression model                    |
+| `cox_plot.png`                | Hazard ratios from Cox model as a bar chart             |
+| `site_feasibility_report.csv` | Site-level patient eligibility and projected enrollment |
+
+
+## 🧪 Use Cases Simulated
+
+Real-world evidence (RWE) modeling
+
+Clinical trial feasibility planning
+
+PRO/COA psychometric data capture
+
+Risk factor identification with Cox regression
+
+Automated clinical data pipelines (Airflow)
+
+
+## 📜 License
+
+This project is licensed under the MIT License — see the ```LICENSE``` file for details.
+
+
+Built by Ajay Chary as a showcase of healthcare analytics, MLOps, and end-to-end data pipeline orchestration.
+
+
+
+
+## 📬 Questions or Feedback?
+Open an issue or contact me directly on GitHub. Contributions welcome!
+
+🔗 [Portfolio](https://ajaychary06.github.io/Portfolio/) 
+
+🐍 [GitHub](https://github.com/ajaychary06) 
+
+💼 [LinkedIn](https://www.linkedin.com/in/ajaychary-kandukuri-053a5a25a/)”
+
+
 
 
