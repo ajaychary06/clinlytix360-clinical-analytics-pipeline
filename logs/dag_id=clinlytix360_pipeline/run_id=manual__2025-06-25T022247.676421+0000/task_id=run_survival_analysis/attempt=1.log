@@ -1,0 +1,64 @@
+[2025-06-25T02:23:25.629+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-25T02:23:25.729+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: clinlytix360_pipeline.run_survival_analysis manual__2025-06-25T02:22:47.676421+00:00 [queued]>
+[2025-06-25T02:23:25.758+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: clinlytix360_pipeline.run_survival_analysis manual__2025-06-25T02:22:47.676421+00:00 [queued]>
+[2025-06-25T02:23:25.761+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-06-25T02:23:25.813+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): run_survival_analysis> on 2025-06-25 02:22:47.676421+00:00
+[2025-06-25T02:23:25.848+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=180) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-25T02:23:25.852+0000] {standard_task_runner.py:63} INFO - Started process 184 to run task
+[2025-06-25T02:23:25.858+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'clinlytix360_pipeline', 'run_survival_analysis', 'manual__2025-06-25T02:22:47.676421+00:00', '--job-id', '22', '--raw', '--subdir', 'DAGS_FOLDER/clinlytix_dag.py', '--cfg-path', '/tmp/tmpsg7gd0c5']
+[2025-06-25T02:23:25.866+0000] {standard_task_runner.py:91} INFO - Job 22: Subtask run_survival_analysis
+[2025-06-25T02:23:26.317+0000] {task_command.py:426} INFO - Running <TaskInstance: clinlytix360_pipeline.run_survival_analysis manual__2025-06-25T02:22:47.676421+00:00 [running]> on host 8c1f13682a11
+[2025-06-25T02:23:26.906+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='ajayc' AIRFLOW_CTX_DAG_ID='clinlytix360_pipeline' AIRFLOW_CTX_TASK_ID='run_survival_analysis' AIRFLOW_CTX_EXECUTION_DATE='2025-06-25T02:22:47.676421+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-25T02:22:47.676421+00:00'
+[2025-06-25T02:23:26.918+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-25T02:23:26.941+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-06-25T02:23:26.956+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python /opt/***/data/scripts/modeling/survival_analysis.py']
+[2025-06-25T02:23:27.041+0000] {subprocess.py:86} INFO - Output:
+[2025-06-25T02:24:06.977+0000] {subprocess.py:93} INFO - 📈 Kaplan-Meier Survival Curve by Cancer Stage
+[2025-06-25T02:24:07.040+0000] {subprocess.py:93} INFO - ⚙️ Running Cox Proportional Hazards Regression
+[2025-06-25T02:24:07.054+0000] {subprocess.py:93} INFO - 
+[2025-06-25T02:24:07.060+0000] {subprocess.py:93} INFO - 🧠 Cox Model Summary:
+[2025-06-25T02:24:07.063+0000] {subprocess.py:93} INFO - <lifelines.CoxPHFitter: fitted with 200 total observations, 129 right-censored observations>
+[2025-06-25T02:24:07.080+0000] {subprocess.py:93} INFO -              duration col = 'days_survived'
+[2025-06-25T02:24:07.106+0000] {subprocess.py:93} INFO -                 event col = 'event_status'
+[2025-06-25T02:24:07.120+0000] {subprocess.py:93} INFO -       baseline estimation = breslow
+[2025-06-25T02:24:07.137+0000] {subprocess.py:93} INFO -    number of observations = 200
+[2025-06-25T02:24:07.155+0000] {subprocess.py:93} INFO - number of events observed = 71
+[2025-06-25T02:24:07.184+0000] {subprocess.py:93} INFO -    partial log-likelihood = -307.95
+[2025-06-25T02:24:07.214+0000] {subprocess.py:93} INFO -          time fit was run = 2025-06-25 02:24:01 UTC
+[2025-06-25T02:24:07.231+0000] {subprocess.py:93} INFO - 
+[2025-06-25T02:24:07.279+0000] {subprocess.py:93} INFO - ---
+[2025-06-25T02:24:07.281+0000] {subprocess.py:93} INFO -                       coef  exp(coef)   se(coef)   coef lower 95%   coef upper 95%  exp(coef) lower 95%  exp(coef) upper 95%
+[2025-06-25T02:24:07.282+0000] {subprocess.py:93} INFO - covariate
+[2025-06-25T02:24:07.308+0000] {subprocess.py:93} INFO - age                  -0.00       1.00       0.01            -0.02             0.02                 0.98                 1.02
+[2025-06-25T02:24:07.310+0000] {subprocess.py:93} INFO - sex_Male              0.05       1.05       0.24            -0.43             0.53                 0.65                 1.69
+[2025-06-25T02:24:07.338+0000] {subprocess.py:93} INFO - stage_II             -0.13       0.88       0.37            -0.86             0.60                 0.42                 1.82
+[2025-06-25T02:24:07.376+0000] {subprocess.py:93} INFO - stage_III             0.29       1.33       0.35            -0.41             0.98                 0.67                 2.66
+[2025-06-25T02:24:07.392+0000] {subprocess.py:93} INFO - stage_IV              0.18       1.20       0.36            -0.52             0.88                 0.59                 2.42
+[2025-06-25T02:24:07.427+0000] {subprocess.py:93} INFO - treatment_Combo      -0.32       0.73       0.33            -0.97             0.33                 0.38                 1.40
+[2025-06-25T02:24:07.429+0000] {subprocess.py:93} INFO - treatment_Radiation  -0.73       0.48       0.35            -1.42            -0.04                 0.24                 0.96
+[2025-06-25T02:24:07.460+0000] {subprocess.py:93} INFO - treatment_Surgery    -0.60       0.55       0.33            -1.25             0.06                 0.29                 1.06
+[2025-06-25T02:24:07.462+0000] {subprocess.py:93} INFO - 
+[2025-06-25T02:24:07.463+0000] {subprocess.py:93} INFO -                       cmp to     z    p   -log2(p)
+[2025-06-25T02:24:07.480+0000] {subprocess.py:93} INFO - covariate
+[2025-06-25T02:24:07.486+0000] {subprocess.py:93} INFO - age                     0.00 -0.01 0.99       0.01
+[2025-06-25T02:24:07.507+0000] {subprocess.py:93} INFO - sex_Male                0.00  0.20 0.84       0.25
+[2025-06-25T02:24:07.509+0000] {subprocess.py:93} INFO - stage_II                0.00 -0.35 0.73       0.46
+[2025-06-25T02:24:07.513+0000] {subprocess.py:93} INFO - stage_III               0.00  0.81 0.42       1.26
+[2025-06-25T02:24:07.527+0000] {subprocess.py:93} INFO - stage_IV                0.00  0.50 0.62       0.70
+[2025-06-25T02:24:07.545+0000] {subprocess.py:93} INFO - treatment_Combo         0.00 -0.96 0.34       1.56
+[2025-06-25T02:24:07.547+0000] {subprocess.py:93} INFO - treatment_Radiation     0.00 -2.08 0.04       4.72
+[2025-06-25T02:24:07.549+0000] {subprocess.py:93} INFO - treatment_Surgery       0.00 -1.79 0.07       3.77
+[2025-06-25T02:24:07.566+0000] {subprocess.py:93} INFO - ---
+[2025-06-25T02:24:07.570+0000] {subprocess.py:93} INFO - Concordance = 0.59
+[2025-06-25T02:24:07.588+0000] {subprocess.py:93} INFO - Partial AIC = 631.89
+[2025-06-25T02:24:07.594+0000] {subprocess.py:93} INFO - log-likelihood ratio test = 6.75 on 8 df
+[2025-06-25T02:24:07.598+0000] {subprocess.py:93} INFO - -log2(p) of ll-ratio test = 0.83
+[2025-06-25T02:24:07.613+0000] {subprocess.py:93} INFO - 
+[2025-06-25T02:24:11.869+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-06-25T02:24:11.918+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-25T02:24:12.477+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=clinlytix360_pipeline, task_id=run_survival_analysis, execution_date=20250625T022247, start_date=20250625T022325, end_date=20250625T022412
+[2025-06-25T02:24:12.853+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-25T02:24:13.054+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-25T02:24:13.073+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

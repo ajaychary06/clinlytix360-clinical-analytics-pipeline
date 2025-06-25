@@ -1,0 +1,24 @@
+[2025-06-25T03:41:01.633+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-06-25T03:41:01.720+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: clinlytix360_pipeline.log_dashboard_refresh manual__2025-06-25T03:39:55.881905+00:00 [queued]>
+[2025-06-25T03:41:01.768+0000] {taskinstance.py:2073} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: clinlytix360_pipeline.log_dashboard_refresh manual__2025-06-25T03:39:55.881905+00:00 [queued]>
+[2025-06-25T03:41:01.786+0000] {taskinstance.py:2303} INFO - Starting attempt 1 of 2
+[2025-06-25T03:41:01.884+0000] {taskinstance.py:2327} INFO - Executing <Task(BashOperator): log_dashboard_refresh> on 2025-06-25 03:39:55.881905+00:00
+[2025-06-25T03:41:01.943+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:61: DeprecationWarning: This process (pid=443) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-06-25T03:41:01.953+0000] {standard_task_runner.py:63} INFO - Started process 453 to run task
+[2025-06-25T03:41:01.951+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'clinlytix360_pipeline', 'log_dashboard_refresh', 'manual__2025-06-25T03:39:55.881905+00:00', '--job-id', '34', '--raw', '--subdir', 'DAGS_FOLDER/clinlytix_dag.py', '--cfg-path', '/tmp/tmpqccygz5a']
+[2025-06-25T03:41:01.974+0000] {standard_task_runner.py:91} INFO - Job 34: Subtask log_dashboard_refresh
+[2025-06-25T03:41:02.235+0000] {task_command.py:426} INFO - Running <TaskInstance: clinlytix360_pipeline.log_dashboard_refresh manual__2025-06-25T03:39:55.881905+00:00 [running]> on host 34096c58d0ef
+[2025-06-25T03:41:02.588+0000] {taskinstance.py:2644} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='ajayc' AIRFLOW_CTX_DAG_ID='clinlytix360_pipeline' AIRFLOW_CTX_TASK_ID='log_dashboard_refresh' AIRFLOW_CTX_EXECUTION_DATE='2025-06-25T03:39:55.881905+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-06-25T03:39:55.881905+00:00'
+[2025-06-25T03:41:02.597+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-06-25T03:41:02.601+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-06-25T03:41:02.608+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'echo "Dashboard ready to serve latest data."']
+[2025-06-25T03:41:02.652+0000] {subprocess.py:86} INFO - Output:
+[2025-06-25T03:41:02.662+0000] {subprocess.py:93} INFO - Dashboard ready to serve latest data.
+[2025-06-25T03:41:02.664+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-06-25T03:41:02.666+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-06-25T03:41:02.741+0000] {taskinstance.py:1205} INFO - Marking task as SUCCESS. dag_id=clinlytix360_pipeline, task_id=log_dashboard_refresh, execution_date=20250625T033955, start_date=20250625T034101, end_date=20250625T034102
+[2025-06-25T03:41:02.827+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2025-06-25T03:41:02.881+0000] {taskinstance.py:3482} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-06-25T03:41:02.887+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

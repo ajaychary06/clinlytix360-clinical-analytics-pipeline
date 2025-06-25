@@ -1,0 +1,16 @@
+site_id,country,required_stage,allowed_sex,target_enrollment,eligible_patients,projected_fill_rate
+S001,India,IV,Any,115,52,0.45
+S002,Brazil,IV,Any,141,52,0.37
+S003,US,IV,Female,143,31,0.22
+S004,US,IV,Female,87,31,0.36
+S005,Brazil,III,Male,100,22,0.22
+S006,Germany,III,Male,112,22,0.2
+S007,UK,IV,Male,53,21,0.4
+S008,India,III,Male,50,22,0.44
+S009,UK,III,Female,57,29,0.51
+S010,Brazil,III,Any,78,51,0.65
+S011,US,IV,Female,104,31,0.3
+S012,US,III,Male,52,22,0.42
+S013,India,IV,Female,81,31,0.38
+S014,US,III,Any,59,51,0.86
+S015,US,III,Any,123,51,0.41
