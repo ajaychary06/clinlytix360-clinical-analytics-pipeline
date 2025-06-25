@@ -1,6 +1,6 @@
 # Clinlytix360: End-to-End Clinical & Real-World Outcomes Analytics Platform
 
-Clinlytix360 is a full-stack, containerized data analytics pipeline that simulates real-world clinical data, performs survival and feasibility analysis, and visualizes insights through an interactive Streamlit dashboard. The project is designed to mirror analytical workflows used in clinical trial design, PRO/COA psychometrics, and real-world evidence (RWE) analysis — making it ideal for demonstrating skills relevant to roles at IQVIA, Flatiron Health, and other healthcare data science teams.
+Clinlytix360 is a full-stack, containerized data analytics pipeline that simulates real-world clinical data, performs survival and feasibility analysis, and visualizes insights through an interactive Streamlit dashboard. The project is designed to mirror analytical workflows used in clinical trial design, PRO/COA psychometrics, and real-world evidence (RWE) analysis 
 
 ---
 
